@@ -1,0 +1,42 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(oldlace, #fbecce);
+  cursor: default; }
+
+nav a {
+  color: black !important; }
+
+.content {
+  padding: 2rem;
+  margin: 0 auto; }
+
+.box {
+  min-height: 100vh; }
+
+#logo-big {
+  height: 24rem; }
+
+body {
+  font-family: "ubuntu"; }
+
+.navbar {
+  position: absolute !important;
+  width: 100vw; }
+
+#logo {
+  height: 100%;
+  padding: .5rem;
+  animation: logoSpin 30s infinite linear;
+  backface-visibility: hidden; }
+
+@keyframes logoSpin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=styles.css.map */

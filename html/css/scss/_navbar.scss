@@ -1,0 +1,22 @@
+.navbar{
+    // height: $navbar-height !important;
+    position: absolute !important;
+    width: 100vw;
+    // top: 0; left: 0;
+}
+
+#logo{
+    height: 100%;
+    padding: .5rem;
+    animation: logoSpin 30s infinite linear;
+    backface-visibility: hidden;
+}
+
+@keyframes logoSpin{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}

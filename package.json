@@ -1,0 +1,20 @@
+{
+  "name": "elrincondeidiomas",
+  "version": "1.0.0",
+  "description": "Dashboard for El El Rincón de Idiomas",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "author": "David Andrews",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.2"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "pg": "^7.11.0",
+    "pug": "^2.0.3"
+  }
+}

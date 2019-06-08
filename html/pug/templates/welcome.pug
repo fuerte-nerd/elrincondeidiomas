@@ -1,0 +1,15 @@
+include ../includes/header
+div.valign-wrapper.box 
+    div.content.center-align
+        img#logo-big(src="./assets/logo.png")
+        h4.heading#login-header Login 
+        div.login-form.row
+            form.col.s12
+                div.row
+                    div.input-field.col.s6
+                        input.login-form--input#username(type="text" placeholder="Username")
+                    div.input-field.col.s6
+                        input.login-form--input#password(type="password" placeholder="Password")
+                input.login-form--btn.btn-flat.waves-effect#login-submit(type="submit" value="Login")
+        p.red-text#login-error
+script(src="../libs/login.js")
