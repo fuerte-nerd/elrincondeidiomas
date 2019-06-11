@@ -1,0 +1,14 @@
+.padding{
+    &-top{
+        padding-top: 4rem;
+    }
+    &-sm{
+        padding: .5rem;
+    }
+    &-md{
+        padding: 1rem;
+    }
+    &-lg{
+        padding: 2rem;
+    }
+}

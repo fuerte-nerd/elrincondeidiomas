@@ -1,0 +1,13 @@
+extends ../page
+block nav
+    include ../includes/nav
+block content
+    div.content.center-align.dashboard.padding-top
+        img.dashboard--logo(src="./assets/logo.png")
+        div.dashboard--text
+            h4.heading.dashboard--text__heading Dashboard
+            div.dashboard--text__dateandtime
+                div.dashboard--text__dateandtime-time
+                div.dashboard--text__dateandtime-date
+block scripts
+    script(src="../libs/clock.js")

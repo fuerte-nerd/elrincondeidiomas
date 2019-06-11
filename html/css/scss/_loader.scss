@@ -1,0 +1,13 @@
+#load-screen{
+    position: absolute;
+    background: white;
+    top: 0; left: 0; right: 0; bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+    &--text{
+        font-size: 4rem;
+        // color: white;
+    }
+}

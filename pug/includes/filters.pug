@@ -1,0 +1,37 @@
+div.filter--toggler.padding-lg
+    label
+        input.filter--toggler__checkbox#toggle-filter(type="checkbox")
+        span.filter--toggler__text Show filters
+div.filter.hide
+    div.filter--group
+        span.filter--group__heading Name
+        div.filter--group__option.input-field
+            input#filter-name.filter--group__option-text(type="text")
+    div.filter--group
+        span.filter--group__heading Age
+        div#age-group
+            div.filter--group__option.input-field
+                input#filter-age-lowest.filter--group__option-number(type="number" value="0")
+                label.filter--group__option-label(for="filter-age-lowest") From (incl.)
+            div.filter--group__option.input-field
+                input#filter-age-highest.filter--group__option-number(type="number" value="100")
+                label.filter--group__option-label(for="filter-age-highest") To (incl.)
+    div.filter--group.input-field
+        span.filter--group__heading Gender
+        div.filter--group__option
+            label
+                input#filter-sex-m.filter--group__option-checkbox(type="checkbox" checked)
+                span.filter--group__option-label Male
+        div.filter--group__option
+            label
+                input#filter-sex-f.filter--group__option-checkbox(type="checkbox" checked)
+                span.filter--group__option-text Female
+script.
+    const filters = document.querySelector('.filter');
+    document.getElementById('toggle-filter').addEventListener('change',(e)=>{
+        if(e.target.checked){
+            filters.classList.remove('hide')
+        }else{
+            filters.classList.add('hide');
+        }
+    })

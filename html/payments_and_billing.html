@@ -1,0 +1,34 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    <div id="load-screen"></div>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper"><a href="./dashboard.html"><img id="logo" src="./assets/logo.png" alt="Logo"/></a>
+          <ul class="right" id="nav-mobile">
+            <li><a href="./student_directory.html">Student Directory</a></li>
+            <li><a href="./correspondence.html">Correspondence</a></li>
+            <li><a href="./payments_and_billing.html">Payments and Billing</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="valign-wrapper box">
+      <div class="content center-align">
+        <h1>Payments and Billing</h1>
+      </div>
+    </div>
+    <script src="../libs/materialize/bin/materialize.min.js"></script>
+    <script>
+      window.onload = ()=>{
+          document.getElementById('load-screen').classList.add('fade-out');
+      }
+    </script>
+  </body>
+</html>

@@ -1,3 +1,2 @@
-$primary-font: 'ubuntu';
-$primary: lighten(oldlace,0%);
-// $navbar-height: 70px;
+$primary-color: #fcf8e7 !default;
+$secondary-color: invert($primary-color) !default;

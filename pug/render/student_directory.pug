@@ -1,0 +1,77 @@
+extends ../page
+block nav
+    include ../includes/nav
+block content
+    div
+        div.content.center-align.studentdirectory
+            h1.studentdirectory--heading.heading Student Directory
+            div.studentdirectory--mainmenu
+                button.studentdirectory--mainmenu__btn.btn-small.waves-effect
+                    i.studentdirectory--mainmenu__btn-icon.material-icons.left add 
+                    span.studentdirectory--mainmenu__btn-text Add new student
+                include ../includes/filters
+            table.highlight.studentdirectory--table
+                thead
+                    tr
+                        th First name(s)
+                        th Second name
+                        th Age
+                        th Class(es)
+                        th
+                            i.material-icons info
+                        th
+                            i.material-icons email
+                        th
+                            i.material-icons phone
+                        th
+                            i.material-icons edit
+                        th
+                            i.material-icons delete
+                        th
+                            label
+                                input.filled-in#checkbox-00001(type="checkbox")
+                                span Select
+                tbody
+                    tr
+                        td Jonathan
+                        td Bloggs
+                        td 12
+                        td R1
+                        td
+                            a(href="#")
+                                i.material-icons info
+                        td
+                            a(href="#")
+                                i.material-icons email
+                        td
+                            a(href="#")
+                                i.material-icons phone
+                        td
+                            a(href="#")
+                                i.material-icons edit
+                        td
+                            a(href="#")
+                                i.material-icons delete
+                        td
+                            label
+                                input.filled-in#checkbox-00001(type="checkbox")
+                                span Select
+                    tr
+                        td Jennifer
+                        td Bloggs
+                        td 8
+                        td R1
+                        td
+                            i.material-icons info
+                        td
+                            i.material-icons email
+                        td
+                            i.material-icons phone  
+                        td
+                            i.material-icons edit
+                        td
+                            i.material-icons delete
+                        td
+                            label
+                                input.filled-in#checkbox-00002(type="checkbox")
+                                span Select

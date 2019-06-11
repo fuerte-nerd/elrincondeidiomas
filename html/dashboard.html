@@ -1,1 +1,39 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/><link href="https://fonts.googleapis.com/css?family=Ubuntu&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="./css/styles.css"/></head><body></body></html><div class="navbar"><nav class="orange lighten-4"><div class="nav-wrapper"><a href="#"><img id="logo" src="./assets/logo.png" alt="Logo"/></a><ul class="right" id="nav-mobile"><li><a href="#">Student Directory</a></li><li><a href="#">Correspondence</a></li><li><a href="#">Payments and Billing</a></li></ul></div></nav></div><div class="valign-wrapper box"><div class="content center-align"><img id="logo-big" src="./assets/logo.png"/><h4 class="heading" id="heading-dashboard">Welcome!</h4><p id="msg-logged-in">You have successfully logged in.</p><div id="date-and-time"><div id="date-and-time--clock"></div><div id="date-and-time--date"></div></div></div></div><script src="../libs/clock.js"></script>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    <div id="load-screen"></div>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper"><a href="./dashboard.html"><img id="logo" src="./assets/logo.png" alt="Logo"/></a>
+          <ul class="right" id="nav-mobile">
+            <li><a href="./student_directory.html">Student Directory</a></li>
+            <li><a href="./correspondence.html">Correspondence</a></li>
+            <li><a href="./payments_and_billing.html">Payments and Billing</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="content center-align dashboard padding-top"><img class="dashboard--logo" src="./assets/logo.png"/>
+      <div class="dashboard--text">
+        <h4 class="heading dashboard--text__heading">Dashboard</h4>
+        <div class="dashboard--text__dateandtime">
+          <div class="dashboard--text__dateandtime-time"></div>
+          <div class="dashboard--text__dateandtime-date"></div>
+        </div>
+      </div>
+    </div>
+    <script src="../libs/materialize/bin/materialize.min.js"></script>
+    <script>
+      window.onload = ()=>{
+          document.getElementById('load-screen').classList.add('fade-out');
+      }
+    </script>
+    <script src="../libs/clock.js"></script>
+  </body>
+</html>

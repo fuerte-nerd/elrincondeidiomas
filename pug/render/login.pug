@@ -1,0 +1,19 @@
+extends ../page
+block content
+    div.valign-wrapper.box 
+        div.content.center-align.login
+            img.login--logo(src="./assets/logo.png")
+            h4.heading.login--heading#login-header Control Panel 
+            div.login--form.row
+                form.col.s12
+                    div.row
+                        div.input-field.col.s6.login--form__input
+                            input.login--form__input-input#username(type="text")
+                            label.login--form__input-label(for="username") Username
+                        div.input-field.col.s6.login--form__input
+                            input.login--form__input-input#password(type="password")
+                            label.login--form__input-label(for="password") Password
+                    button.login--form__btn.btn.waves-effect#login-submit(type="submit") Login
+            p.login--form__error.red-text#login-error
+block scripts
+    script(src="../libs/login.js")

@@ -1,0 +1,17 @@
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href="./css/styles.css")
+    body
+        div#load-screen
+        block nav
+        block content
+        script(src="../libs/materialize/bin/materialize.min.js")
+        script.
+            window.onload = ()=>{
+                document.getElementById('load-screen').classList.add('fade-out');
+            }
+        block scripts
+        block foot

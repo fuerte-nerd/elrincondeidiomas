@@ -1,0 +1,15 @@
+.login{
+    &--logo{
+        height: 24rem;
+        animation: logoSpin 80s infinite linear;
+    }
+    &--heading{}
+    &--form{
+        &__input{
+            &-input{}
+            &-label{}
+        }
+        &__btn{}
+        &__error{}
+    }
+}

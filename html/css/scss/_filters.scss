@@ -1,0 +1,15 @@
+.filter{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 2rem;
+    padding: 2rem;
+    margin: 1rem auto;
+    border: 1px solid;
+    max-width: 800px;
+}
+
+#age-group{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}

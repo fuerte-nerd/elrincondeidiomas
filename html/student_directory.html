@@ -1,0 +1,137 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    <div id="load-screen"></div>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper"><a href="./dashboard.html"><img id="logo" src="./assets/logo.png" alt="Logo"/></a>
+          <ul class="right" id="nav-mobile">
+            <li><a href="./student_directory.html">Student Directory</a></li>
+            <li><a href="./correspondence.html">Correspondence</a></li>
+            <li><a href="./payments_and_billing.html">Payments and Billing</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div>
+      <div class="content center-align studentdirectory">
+        <h1 class="studentdirectory--heading heading">Student Directory</h1>
+        <div class="studentdirectory--mainmenu">
+          <button class="studentdirectory--mainmenu__btn btn-small waves-effect"><i class="studentdirectory--mainmenu__btn-icon material-icons left">add </i><span class="studentdirectory--mainmenu__btn-text">Add new student</span></button>
+          <div class="filter--toggler padding-lg">
+            <label>
+              <input class="filter--toggler__checkbox" id="toggle-filter" type="checkbox"/><span class="filter--toggler__text">Show filters</span>
+            </label>
+          </div>
+          <div class="filter hide">
+            <div class="filter--group"><span class="filter--group__heading">Name</span>
+              <div class="filter--group__option input-field">
+                <input class="filter--group__option-text" id="filter-name" type="text"/>
+              </div>
+            </div>
+            <div class="filter--group"><span class="filter--group__heading">Age</span>
+              <div id="age-group">
+                <div class="filter--group__option input-field">
+                  <input class="filter--group__option-number" id="filter-age-lowest" type="number" value="0"/>
+                  <label class="filter--group__option-label" for="filter-age-lowest">From (incl.)</label>
+                </div>
+                <div class="filter--group__option input-field">
+                  <input class="filter--group__option-number" id="filter-age-highest" type="number" value="100"/>
+                  <label class="filter--group__option-label" for="filter-age-highest">To (incl.)</label>
+                </div>
+              </div>
+            </div>
+            <div class="filter--group input-field"><span class="filter--group__heading">Gender</span>
+              <div class="filter--group__option">
+                <label>
+                  <input class="filter--group__option-checkbox" id="filter-sex-m" type="checkbox" checked="checked"/><span class="filter--group__option-label">Male</span>
+                </label>
+              </div>
+              <div class="filter--group__option">
+                <label>
+                  <input class="filter--group__option-checkbox" id="filter-sex-f" type="checkbox" checked="checked"/><span class="filter--group__option-text">Female</span>
+                </label>
+              </div>
+            </div>
+          </div>
+          <script>
+            const filters = document.querySelector('.filter');
+            document.getElementById('toggle-filter').addEventListener('change',(e)=>{
+                if(e.target.checked){
+                    filters.classList.remove('hide')
+                }else{
+                    filters.classList.add('hide');
+                }
+            })
+          </script>
+        </div>
+        <table class="highlight studentdirectory--table">
+          <thead>
+            <tr>
+              <th>First name(s)</th>
+              <th>Second name</th>
+              <th>Age</th>
+              <th>Class(es)</th>
+              <th><i class="material-icons">info</i></th>
+              <th><i class="material-icons">email</i></th>
+              <th><i class="material-icons">phone</i></th>
+              <th><i class="material-icons">edit</i></th>
+              <th><i class="material-icons">delete</i></th>
+              <th>
+                <label>
+                  <input class="filled-in" id="checkbox-00001" type="checkbox"/><span>Select</span>
+                </label>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Jonathan</td>
+              <td>Bloggs</td>
+              <td>12</td>
+              <td>R1</td>
+              <td><a href="#"><i class="material-icons">info</i></a></td>
+              <td><a href="#"><i class="material-icons">email</i></a></td>
+              <td><a href="#"><i class="material-icons">phone</i></a></td>
+              <td><a href="#"><i class="material-icons">edit</i></a></td>
+              <td><a href="#"><i class="material-icons">delete</i></a></td>
+              <td>
+                <label>
+                  <input class="filled-in" id="checkbox-00001" type="checkbox"/><span>Select</span>
+                </label>
+              </td>
+            </tr>
+            <tr>
+              <td>Jennifer</td>
+              <td>Bloggs</td>
+              <td>8</td>
+              <td>R1</td>
+              <td><i class="material-icons">info</i></td>
+              <td><i class="material-icons">email</i></td>
+              <td><i class="material-icons">phone  </i></td>
+              <td><i class="material-icons">edit</i></td>
+              <td><i class="material-icons">delete</i></td>
+              <td>
+                <label>
+                  <input class="filled-in" id="checkbox-00002" type="checkbox"/><span>Select</span>
+                </label>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="../libs/materialize/bin/materialize.min.js"></script>
+    <script>
+      window.onload = ()=>{
+          document.getElementById('load-screen').classList.add('fade-out');
+      }
+    </script>
+  </body>
+</html>

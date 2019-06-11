@@ -1,6 +1,16 @@
+
 @import './scss/variables';
+@import './scss/materialize/materialize.scss';
 @import './scss/base';
 @import './scss/layout';
+@import './scss/helpers';
+@import './scss/animations';
 @import './scss/typography';
+@import './scss/icons';
+
+@import './scss/loader';
+@import './scss/login';
 @import './scss/navbar';
+@import './scss/dashboard';
+@import './scss/filters';
 

@@ -1,3 +1,26 @@
-body{
-    font-family: $primary-font;
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../assets/roboto-regular-webfont.woff2') format('woff2'),
+         url('../assets/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'robotobold';
+    src: url('../assets/roboto-bold-webfont.woff2') format('woff2'),
+         url('../assets/roboto-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+html{
+    font-family: 'robotoregular';
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'robotobold';
 }
