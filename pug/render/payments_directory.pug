@@ -1,0 +1,36 @@
+extends ../page
+block nav
+    include ../includes/nav
+block content
+    div.container
+        div.row.valign-wrapper
+            div.col.s8
+                h1 Payments Directory
+            div.col.s4.right-align
+                button.btn#add_payment
+                    i.material-icons add
+        hr
+        div.row
+            div.col.s12.center-align
+                label
+                    input#outstanding(name="status" type="radio" checked)
+                    span Show outstanding
+                label
+                    input#paid(name="status" type="radio")
+                    span Show Paid
+        div.row
+            div.col.s12
+                table#outstanding-table.centered
+                    thead
+                        th Invoice ref.
+                        th Student 
+                        th Invoice issued
+                        th Invoice period
+                        th Paid?
+                        th Days to pay
+                    tbody#table-body
+                
+block scripts
+    script(src="../libs/init/paymentsDirectory.js")
+
+                

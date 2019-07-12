@@ -1,0 +1,56 @@
+extends ../page
+block nav
+    include ../includes/nav
+block content
+    div.container
+        div.row.valign-wrapper
+            div.col.s8
+                h1 Class Directory
+            div.col.s4.right-align
+                button.btn#add_class 
+                    i.material-icons.right add
+                    span Add new class
+        hr
+        div.row
+            div.col.s12
+                table.centered
+                    thead
+                            tr
+                            th Class name
+                            th Language
+                            th Teacher
+                            th No. of attendees
+                            th Schedule
+                            th Level
+                            th Average age
+                            th View/Edit
+                    tbody#tbody
+                        
+block scripts
+    script.
+        const { BrowserWindow } = require('electron').remote;
+        const path = require('path');
+        const ipcRenderer = require('electron').ipcRenderer;
+        const populateDirectory = require(path.join('../libs/init/populate_class_directory'));
+        
+
+        document.getElementById('add_class').addEventListener('click', ()=>{
+            let addClass = new BrowserWindow({
+                modal: true,
+                width: 700,
+                height: 620,
+                webPreferences: {
+                    nodeIntegration: true
+                }
+            })  
+            addClass.loadFile('./html/class_add.html');
+            addClass.setTitle('Add New Class')
+            addClass.on('closed', () => {
+                addClass = null;
+            })
+        })
+        
+        // populate the class directory table
+        populateDirectory();
+        
+        ipcRenderer.on('db_updated', populateDirectory)

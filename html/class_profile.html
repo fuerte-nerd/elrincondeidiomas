@@ -1,0 +1,204 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    <div id="load-screen"></div>
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s6"><img src="./assets/logo.png" style="width: 75px; margin-bottom: -6px; padding-right: 20px;"/>
+          <h1 style="display: inline-block;">Class Profile</h1>
+        </div>
+        <div class="col s6 right-align"><a class="btn" id="email"><i class="material-icons right">mail</i></a><a class="btn" id="edit"><i class="material-icons right" id="lock-icon">lock</i></a>
+          <div class="red-text" id="error"></div>
+        </div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s6 input-field">
+          <input id="class_name" type="text"/>
+          <label for="class_name">Name of class</label>
+        </div>
+        <div class="col offset-s2 s4 right-align">
+          <label>Please select a language:</label><br/>
+          <label>
+            <input class="language" id="english" type="radio" name="language" option="english"/><span>English</span>
+          </label>
+          <label>
+            <input class="language" id="spanish" type="radio" name="language" option="spanish"/><span>Spanish</span>
+          </label>
+          <label>
+            <input class="language" id="french" type="radio" name="language" option="french"/><span>French</span>
+          </label>
+        </div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s12 input-field">
+          <select id="attendees" multiple="multiple">
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Attendee(s)</label>
+        </div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s4 input-field">
+          <select id="teachers">
+            <option value="" disabled="disabled" selected="selected">Please select</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Teacher</label>
+        </div>
+        <div class="col s4 input-field">
+          <select id="levels">
+            <option value="" disabled="disabled" selected="selected">Please select</option>
+            <option value="1">Option 1</option>
+            <option value="2">Option 2</option>
+            <option value="3">Option 3</option>
+          </select>
+          <label>Study level</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="rate" type="number"/>
+          <label for="rate">Monthly rate</label>
+        </div>
+      </div>
+      <div class="row center-align">
+        <h2>Scheduling</h2>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s2 offset-s1">
+          <label>
+            <input class="day" id="monday" type="checkbox" day="monday"/><span>Monday</span>
+          </label>
+        </div>
+        <div class="col s4 input-field">
+          <input class="timepicker" id="monday_time" type="text" disabled="disabled"/>
+          <label for="monday_time">Start time</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="monday_duration" type="number" min="15" max="180" disabled="disabled"/>
+          <label for="monday_duration">Duration</label>
+        </div>
+        <div class="col s1"></div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s2 offset-s1">
+          <label>
+            <input class="day" id="tuesday" type="checkbox" day="tuesday"/><span>Tuesday</span>
+          </label>
+        </div>
+        <div class="col s4 input-field">
+          <input class="timepicker" id="tuesday_time" type="text" disabled="disabled"/>
+          <label for="tuesday_time">Start time</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="tuesday_duration" type="number" min="15" max="180" disabled="disabled"/>
+          <label for="tuesday_duration">Duration</label>
+        </div>
+        <div class="col s1"></div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s2 offset-s1">
+          <label>
+            <input class="day" id="wednesday" type="checkbox" day="wednesday"/><span>Wednesday</span>
+          </label>
+        </div>
+        <div class="col s4 input-field">
+          <input class="timepicker" id="wednesday_time" type="text" disabled="disabled"/>
+          <label for="wednesday_time">Start time</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="wednesday_duration" type="number" min="15" max="180" disabled="disabled"/>
+          <label for="wednesday_duration">Duration</label>
+        </div>
+        <div class="col s1"></div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s2 offset-s1">
+          <label>
+            <input class="day" id="thursday" type="checkbox" day="thursday"/><span>Thursday</span>
+          </label>
+        </div>
+        <div class="col s4 input-field">
+          <input class="timepicker" id="thursday_time" type="text" disabled="disabled"/>
+          <label for="thursday_time">Start time</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="thursday_duration" type="number" min="15" max="180" disabled="disabled"/>
+          <label for="thursday_duration">Duration</label>
+        </div>
+        <div class="col s1"></div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s2 offset-s1">
+          <label>
+            <input class="day" id="friday" type="checkbox" day="friday"/><span>Friday</span>
+          </label>
+        </div>
+        <div class="col s4 input-field">
+          <input class="timepicker" id="friday_time" type="text" disabled="disabled"/>
+          <label for="friday_time">Start time</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="friday_duration" type="number" min="15" max="180" disabled="disabled"/>
+          <label for="friday_duration">Duration</label>
+        </div>
+        <div class="col s1"></div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s2 offset-s1">
+          <label>
+            <input class="day" id="saturday" type="checkbox" day="saturday"/><span>Saturday</span>
+          </label>
+        </div>
+        <div class="col s4 input-field">
+          <input class="timepicker" id="saturday_time" type="text" disabled="disabled"/>
+          <label for="saturday_time">Start time</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="saturday_duration" type="number" min="15" max="180" disabled="disabled"/>
+          <label for="saturday_duration">Duration</label>
+        </div>
+        <div class="col s1"></div>
+      </div>
+      <div class="row valign-wrapper">
+        <div class="col s2 offset-s1">
+          <label>
+            <input class="day" id="sunday" type="checkbox" day="sunday"/><span>Sunday</span>
+          </label>
+        </div>
+        <div class="col s4 input-field">
+          <input class="timepicker" id="sunday_time" type="text" disabled="disabled"/>
+          <label for="sunday_time">Start time</label>
+        </div>
+        <div class="col s4 input-field">
+          <input id="sunday_duration" type="number" min="15" max="180" disabled="disabled"/>
+          <label for="sunday_duration">Duration</label>
+        </div>
+        <div class="col s1"></div>
+      </div>
+    </div>
+    <script src="../libs/materialize/bin/materialize.min.js"></script>
+    <script>
+      window.onload = ()=>{
+          document.getElementById('load-screen').classList.add('fade-out');
+      }
+    </script>
+    <script src="../libs/init/class_profile.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+          var elems = document.querySelectorAll('.timepicker');
+          var instances = M.Timepicker.init(elems, {
+              twelveHour: false
+          });
+      });
+    </script>
+  </body>
+</html>

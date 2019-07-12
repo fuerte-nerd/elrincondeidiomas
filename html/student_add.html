@@ -1,0 +1,186 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    <div id="load-screen"></div>
+    <div class="content">
+      <h1 class="heading studentadd--heading"><img src="./assets/logo.png" style="width: 75px; margin-bottom: -6px; padding-right: 20px;"/>Register</h1>
+      <form id="form">
+        <div class="student-add--form row">
+          <div class="col s12">
+            <div class="row">
+              <div class="input-field col s4">
+                <input class="validate" id="first_names" type="text" required="required"/>
+                <label for="first_names">First name(s)</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="second_name" type="text" required="required"/>
+                <label for="second_name">Second name</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="preferred_name" type="text"/>
+                <label for="preferred_name">Preferred name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <input class="validate" id="email" type="email"/>
+                <label for="email">Email address</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="mobilephone" type="tel"/>
+                <label for="mobilephone">Mobile number</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="homephone" type="tel"/>
+                <label for="homephone">Home number</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <input class="validate" id="street_address" type="text" required="required"/>
+                <label for="street_address">Street address</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="towncity" type="text" required="required"/>
+                <label for="towncity">Town / City</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="postcode" type="text" required="required"/>
+                <label for="postcode">Post code</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input class="validate" id="medical" type="text"/>
+                <label for="medical">Medical information</label>
+              </div>
+            </div>
+            <div class="row" id="parent-details">
+              <div class="input-field col s4">
+                <input class="validate" id="parent_name" type="text"/>
+                <label for="parent_name">Name of parent</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="parent_emergency" type="tel"/>
+                <label for="parent_emergency">Emergency number</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="school" type="text"/>
+                <label for="school">School</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <div>Current language(s):</div>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" option="spanish"/><span>Spanish</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" option="english"/><span>English</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" option="french"/><span>French</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" option="italian"/><span>Italian</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" option="german"/><span>German</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" option="other"/><span>Other</span>
+                  </label>
+                </p>
+              </div>
+              <div class="input-field col s4">
+                <div>Studying language(s):</div>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" option="spanish"/><span>Spanish</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" option="english"/><span>English</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" option="french"/><span>French</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" option="italian"/><span>Italian</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" option="german"/><span>German</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" option="other"/><span>Other</span>
+                  </label>
+                </p>
+              </div>
+              <div class="col s4 right-align">
+                <div>
+                  <label>
+                    <input class="gender" id="male" type="radio" name="gender" option="male"/><span>Male</span>
+                  </label>
+                  <label>
+                    <input class="gender" id="female" type="radio" name="gender" option="female"/><span>Female</span>
+                  </label>
+                </div>
+                <div class="input-field">
+                  <input class="datepicker" type="text" id="dob" placeholder="Date of Birth" required="required"/>
+                </div>
+                <div class="input-field">
+                  <input class="validate" id="discount" type="number"/>
+                  <label for="discount">Discount (%)</label>
+                </div>
+                <div class="input-field">
+                  <textarea class="materialize-textarea" id="notes"></textarea>
+                  <label for="notes">Notes</label>
+                </div>
+                <div class="input-field"><span class="red-text" id="error_display"></span></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col s12 center-align">
+                <button class="btn-large waves-effect" type="submit">Register<i class="material-icons right">send</i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="../libs/init/addStudent.js"></script>
+    <script src="../libs/materialize/bin/materialize.min.js"></script>
+    <script>
+      window.onload = ()=>{
+          document.getElementById('load-screen').classList.add('fade-out');
+      }
+    </script>
+    <script src="../libs/init/addStudent.js"></script>
+  </body>
+</html>

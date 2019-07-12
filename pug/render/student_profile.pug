@@ -1,0 +1,179 @@
+extends ../page
+block content
+    div.container
+        div.row.valign-wrapper
+            div.col.s8
+                h1.heading.studentadd--heading
+                    img(src="./assets/logo.png" style="width: 75px; margin-bottom: -6px; padding-right: 20px;")
+                    span Student Profile
+            div.col.s4.right-align
+                button.btn.waves-effect#edit-profile
+                    i.material-icons.right lock_open
+                    span#btn-text Edit profile
+                div#error_display.red-text
+        form#form
+            div.student-view--form.row
+                div.col.s12
+                    div.row
+                        div.input-field.col.s4
+                            input#first_names.validate(type="text" disabled="false" required)
+                            label.active(for="first_names") First name(s)
+                        div.input-field.col.s4
+                            input#second_names.validate(type="text" disabled="true" required)
+                            label(for="second_names") Second name(s)
+                        div.input-field.col.s4
+                            input#preferred_name.validate(type="text" disabled="true")
+                            label.active(for="preferred_name") Preferred name
+                    div.row
+                        div.input-field.col.s4
+                            input#email.validate(type="email" disabled="true")
+                            label(for="email") Email address
+                        div.input-field.col.s4
+                            input#mobilephone.validate(type="tel" disabled="true")
+                            label(for="mobilephone") Mobile number
+                        div.input-field.col.s4
+                            input#homephone.validate(type="tel" disabled="true")
+                            label(for="homephone") Home number
+                    div.row
+                        div.input-field.col.s4
+                            input#street_address.validate(type="text" disabled="true" required)
+                            label(for="street_address") Street address
+                        div.input-field.col.s4
+                            input#towncity.validate(type="text" disabled="true" required)
+                            label(for="towncity") Town / City
+                        div.input-field.col.s4
+                            input#postcode.validate(type="text" disabled="true" required)
+                            label(for="postcode") Post code
+                    div.row
+                        div.input-field.col.s12
+                            input#medical.validate(type="text" disabled="true")
+                            label(for="medical") Medical information
+                    div.row#parent-details
+                        div.input-field.col.s4
+                            input#parent_name.validate(type="text" disabled="true")
+                            label(for="parent_name") Name of parent
+                        div.input-field.col.s4
+                            input#parent_emergency.validate(type="tel" disabled="true")
+                            label(for="parent_emergency") Emergency number
+                        div.input-field.col.s4
+                            input#school.validate(type="text" disabled="true")
+                            label(for="school") School
+                    div.row
+                        div.input-field.col.s4
+                            div Current language(s):
+                            p
+                                label
+                                    input.current-languages(type="checkbox" disabled="true" option="spanish")
+                                    span Spanish
+                            p
+                                label
+                                    input.current-languages(type="checkbox" disabled="true" option="english")
+                                    span English
+                            p
+                                label
+                                    input.current-languages(type="checkbox" disabled="true" option="french")
+                                    span French
+                            p
+                                label
+                                    input.current-languages(type="checkbox" disabled="true" option="italian")
+                                    span Italian
+                            p
+                                label
+                                    input.current-languages(type="checkbox" disabled="true" option="german")
+                                    span German
+                            p
+                                label
+                                    input.current-languages(type="checkbox" disabled="true" option="other")
+                                    span Other
+                        div.input-field.col.s4
+                            div Studying language(s):
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" disabled="true" option="spanish")
+                                    span Spanish
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" disabled="true" option="english")
+                                    span English
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" disabled="true" option="french")
+                                    span French
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" disabled="true" option="italian")
+                                    span Italian
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" disabled="true" option="german")
+                                    span German
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" disabled="true" option="other")
+                                    span Other
+                        div.col.s4.right-align
+                            div
+                                label
+                                    input.gender#male(type="radio" name="gender" disabled="true" option="male")
+                                    span Male
+                                label
+                                    input.gender#female(type="radio" name="gender" disabled="true" option="female")
+                                    span Female
+                            div.input-field
+                                input(type="text" class="datepicker" id="dob" disabled="true" required)
+                                label(for="dob") Date of Birth
+                            div.input-field
+                                input#discount.validate(type="number" disabled="true")
+                                label(for="discount") Discount (%)
+                            div.input-field
+                                textarea#notes.materialize-textarea(disabled="true")
+                                label(for="notes") Notes
+                        div.row
+                            div.col.s12
+                                h2 Classes
+                                table.centered
+                                    thead
+                                        th Class name
+                                        th Language
+                                        th Level
+                                        th View class
+                                        th Remove class?
+                                    tbody
+                                        td Class A
+                                        td English
+                                        td A1
+                                        td 
+                                            i.material-icons#view-class info
+                                        td 
+                                            i.material-icons#delete-from-class close
+                        div.row
+                            div.col.s5
+                                h2 Attendance
+                                table.centered
+                                    thead
+                                        th Classes offered
+                                        th Classes attended
+                                        th Excused absences
+                                        th Attendance rate
+                                    tbody
+                                        td 40
+                                        td 39
+                                        td 1
+                                        td 99%
+                            div.col.s5.offset-s2
+                                h2 Payments
+                                table.centered
+                                    thead
+                                        th Monthly payment
+                                        th Discount
+                                        th Payments outstanding
+                                        th Amount owed
+                                        th Arrears?
+                                    tbody
+                                        td 45.00
+                                        td 0
+                                        td 1
+                                        td 45.00
+                                        td
+                                            i.green-text.material-icons flag
+    script(src="../libs/init/profileStudent.js")

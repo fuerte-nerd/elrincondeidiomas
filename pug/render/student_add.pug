@@ -1,0 +1,130 @@
+extends ../page
+block content
+    div.content
+        h1.heading.studentadd--heading
+            img(src="./assets/logo.png" style="width: 75px; margin-bottom: -6px; padding-right: 20px;")
+            | Register
+        form#form
+            div.student-add--form.row
+                div.col.s12
+                    div.row
+                        div.input-field.col.s4
+                            input#first_names.validate(type="text" required)
+                            label(for="first_names") First name(s)
+                        div.input-field.col.s4
+                            input#second_name.validate(type="text" required)
+                            label(for="second_name") Second name
+                        div.input-field.col.s4
+                            input#preferred_name.validate(type="text")
+                            label(for="preferred_name") Preferred name
+                    div.row
+                        div.input-field.col.s4
+                            input#email.validate(type="email")
+                            label(for="email") Email address
+                        div.input-field.col.s4
+                            input#mobilephone.validate(type="tel")
+                            label(for="mobilephone") Mobile number
+                        div.input-field.col.s4
+                            input#homephone.validate(type="tel")
+                            label(for="homephone") Home number
+                    div.row
+                        div.input-field.col.s4
+                            input#street_address.validate(type="text" required)
+                            label(for="street_address") Street address
+                        div.input-field.col.s4
+                            input#towncity.validate(type="text" required)
+                            label(for="towncity") Town / City
+                        div.input-field.col.s4
+                            input#postcode.validate(type="text" required)
+                            label(for="postcode") Post code
+                    div.row
+                        div.input-field.col.s12
+                            input#medical.validate(type="text")
+                            label(for="medical") Medical information
+                    div.row#parent-details
+                        div.input-field.col.s4
+                            input#parent_name.validate(type="text")
+                            label(for="parent_name") Name of parent
+                        div.input-field.col.s4
+                            input#parent_emergency.validate(type="tel")
+                            label(for="parent_emergency") Emergency number
+                        div.input-field.col.s4
+                            input#school.validate(type="text")
+                            label(for="school") School
+                    div.row
+                        div.input-field.col.s4
+                            div Current language(s):
+                            p
+                                label
+                                    input.current-languages(type="checkbox" option="spanish")
+                                    span Spanish
+                            p
+                                label
+                                    input.current-languages(type="checkbox" option="english")
+                                    span English
+                            p
+                                label
+                                    input.current-languages(type="checkbox" option="french")
+                                    span French
+                            p
+                                label
+                                    input.current-languages(type="checkbox" option="italian")
+                                    span Italian
+                            p
+                                label
+                                    input.current-languages(type="checkbox" option="german")
+                                    span German
+                            p
+                                label
+                                    input.current-languages(type="checkbox" option="other")
+                                    span Other
+                        div.input-field.col.s4
+                            div Studying language(s):
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" option="spanish")
+                                    span Spanish
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" option="english")
+                                    span English
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" option="french")
+                                    span French
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" option="italian")
+                                    span Italian
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" option="german")
+                                    span German
+                            p
+                                label
+                                    input.studying-languages(type="checkbox" option="other")
+                                    span Other
+                        div.col.s4.right-align
+                            div
+                                label
+                                    input.gender#male(type="radio" name="gender" option="male")
+                                    span Male
+                                label
+                                    input.gender#female(type="radio" name="gender" option="female")
+                                    span Female
+                            div.input-field
+                                input(type="text" class="datepicker" id="dob" placeholder="Date of Birth" required)
+                            div.input-field
+                                input#discount.validate(type="number")
+                                label(for="discount") Discount (%)
+                            div.input-field
+                                textarea#notes.materialize-textarea
+                                label(for="notes") Notes
+                            div.input-field
+                                span.red-text#error_display
+                    div.row
+                        div.col.s12.center-align
+                            button.btn-large.waves-effect(type="submit") Register
+                                i.material-icons.right send
+    block scripts
+        script(src="../libs/init/addStudent.js")

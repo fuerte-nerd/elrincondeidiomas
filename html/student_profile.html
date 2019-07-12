@@ -1,0 +1,247 @@
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/styles.css"/>
+  </head>
+  <body>
+    <div id="load-screen"></div>
+    <div class="container">
+      <div class="row valign-wrapper">
+        <div class="col s8">
+          <h1 class="heading studentadd--heading"><img src="./assets/logo.png" style="width: 75px; margin-bottom: -6px; padding-right: 20px;"/><span>Student Profile</span></h1>
+        </div>
+        <div class="col s4 right-align">
+          <button class="btn waves-effect" id="edit-profile"><i class="material-icons right">lock_open</i><span id="btn-text">Edit profile</span></button>
+          <div class="red-text" id="error_display"></div>
+        </div>
+      </div>
+      <form id="form">
+        <div class="student-view--form row">
+          <div class="col s12">
+            <div class="row">
+              <div class="input-field col s4">
+                <input class="validate" id="first_names" type="text" disabled="false" required="required"/>
+                <label class="active" for="first_names">First name(s)</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="second_names" type="text" disabled="true" required="required"/>
+                <label for="second_names">Second name(s)</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="preferred_name" type="text" disabled="true"/>
+                <label class="active" for="preferred_name">Preferred name</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <input class="validate" id="email" type="email" disabled="true"/>
+                <label for="email">Email address</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="mobilephone" type="tel" disabled="true"/>
+                <label for="mobilephone">Mobile number</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="homephone" type="tel" disabled="true"/>
+                <label for="homephone">Home number</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <input class="validate" id="street_address" type="text" disabled="true" required="required"/>
+                <label for="street_address">Street address</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="towncity" type="text" disabled="true" required="required"/>
+                <label for="towncity">Town / City</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="postcode" type="text" disabled="true" required="required"/>
+                <label for="postcode">Post code</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12">
+                <input class="validate" id="medical" type="text" disabled="true"/>
+                <label for="medical">Medical information</label>
+              </div>
+            </div>
+            <div class="row" id="parent-details">
+              <div class="input-field col s4">
+                <input class="validate" id="parent_name" type="text" disabled="true"/>
+                <label for="parent_name">Name of parent</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="parent_emergency" type="tel" disabled="true"/>
+                <label for="parent_emergency">Emergency number</label>
+              </div>
+              <div class="input-field col s4">
+                <input class="validate" id="school" type="text" disabled="true"/>
+                <label for="school">School</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s4">
+                <div>Current language(s):</div>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" disabled="true" option="spanish"/><span>Spanish</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" disabled="true" option="english"/><span>English</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" disabled="true" option="french"/><span>French</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" disabled="true" option="italian"/><span>Italian</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" disabled="true" option="german"/><span>German</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="current-languages" type="checkbox" disabled="true" option="other"/><span>Other</span>
+                  </label>
+                </p>
+              </div>
+              <div class="input-field col s4">
+                <div>Studying language(s):</div>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" disabled="true" option="spanish"/><span>Spanish</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" disabled="true" option="english"/><span>English</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" disabled="true" option="french"/><span>French</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" disabled="true" option="italian"/><span>Italian</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" disabled="true" option="german"/><span>German</span>
+                  </label>
+                </p>
+                <p>
+                  <label>
+                    <input class="studying-languages" type="checkbox" disabled="true" option="other"/><span>Other</span>
+                  </label>
+                </p>
+              </div>
+              <div class="col s4 right-align">
+                <div>
+                  <label>
+                    <input class="gender" id="male" type="radio" name="gender" disabled="true" option="male"/><span>Male</span>
+                  </label>
+                  <label>
+                    <input class="gender" id="female" type="radio" name="gender" disabled="true" option="female"/><span>Female</span>
+                  </label>
+                </div>
+                <div class="input-field">
+                  <input class="datepicker" type="text" id="dob" disabled="true" required="required"/>
+                  <label for="dob">Date of Birth</label>
+                </div>
+                <div class="input-field">
+                  <input class="validate" id="discount" type="number" disabled="true"/>
+                  <label for="discount">Discount (%)</label>
+                </div>
+                <div class="input-field">
+                  <textarea class="materialize-textarea" id="notes" disabled="true"></textarea>
+                  <label for="notes">Notes</label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s12">
+                  <h2>Classes</h2>
+                  <table class="centered">
+                    <thead>
+                      <th>Class name</th>
+                      <th>Language</th>
+                      <th>Level</th>
+                      <th>View class</th>
+                      <th>Remove class?</th>
+                    </thead>
+                    <tbody>
+                      <td>Class A</td>
+                      <td>English</td>
+                      <td>A1</td>
+                      <td> <i class="material-icons" id="view-class">info</i></td>
+                      <td> <i class="material-icons" id="delete-from-class">close</i></td>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col s5">
+                  <h2>Attendance</h2>
+                  <table class="centered">
+                    <thead>
+                      <th>Classes offered</th>
+                      <th>Classes attended</th>
+                      <th>Excused absences</th>
+                      <th>Attendance rate</th>
+                    </thead>
+                    <tbody>
+                      <td>40</td>
+                      <td>39</td>
+                      <td>1</td>
+                      <td>99%</td>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="col s5 offset-s2">
+                  <h2>Payments</h2>
+                  <table class="centered">
+                    <thead>
+                      <th>Monthly payment</th>
+                      <th>Discount</th>
+                      <th>Payments outstanding</th>
+                      <th>Amount owed</th>
+                      <th>Arrears?</th>
+                    </thead>
+                    <tbody>
+                      <td>45.00</td>
+                      <td>0</td>
+                      <td>1</td>
+                      <td>45.00</td>
+                      <td><i class="green-text material-icons">flag</i></td>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <script src="../libs/init/profileStudent.js"></script>
+    <script src="../libs/materialize/bin/materialize.min.js"></script>
+    <script>
+      window.onload = ()=>{
+          document.getElementById('load-screen').classList.add('fade-out');
+      }
+    </script>
+  </body>
+</html>

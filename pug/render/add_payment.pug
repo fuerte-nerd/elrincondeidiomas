@@ -1,0 +1,48 @@
+extends ../page
+block content
+    div.container
+        div.row.valign-wrapper
+            div.col.s8
+                img(src="./assets/logo.png" style="width: 75px; margin-bottom: -6px; padding-right: 20px;")
+                h1(style="display: inline-block;") Prepare invoice(s)
+            div.col.s4.right-align
+                button.btn#prepare-and-send
+                    i.material-icons send
+                div#error.red-text
+        hr
+        div.row
+            div.col.s6.input-field
+                select#month
+                    option(value="0") January
+                    option(value="1") February
+                    option(value="2") March
+                    option(value="3") April
+                    option(value="4") May
+                    option(value="5") June
+                    option(value="6") July
+                    option(value="7") August
+                    option(value="8") September
+                    option(value="9") October
+                    option(value="10") November
+                    option(value="11") December
+                label Invoice Month
+            div.col.s6.input-field
+                select#year
+                label Invoice Year
+                
+
+        div.row
+            div.col.s12
+                table.centered
+                    thead
+                        th Student
+                        th Monthly rate
+                        th Reductions/Additions
+                        th Comments
+                        th 
+                            label
+                                input#check-all(type="checkbox")
+                                span Select all?
+                    tbody#list-area
+block scripts
+    script(src="../libs/init/addPayment.js")

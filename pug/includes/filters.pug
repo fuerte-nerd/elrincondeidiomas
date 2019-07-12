@@ -1,7 +1,7 @@
 div.filter--toggler.padding-lg
     label
         input.filter--toggler__checkbox#toggle-filter(type="checkbox")
-        span.filter--toggler__text Show filters
+        span.filter--toggler__text Apply filters
 div.filter.hide
     div.filter--group
         span.filter--group__heading Name
@@ -26,12 +26,3 @@ div.filter.hide
             label
                 input#filter-sex-f.filter--group__option-checkbox(type="checkbox" checked)
                 span.filter--group__option-text Female
-script.
-    const filters = document.querySelector('.filter');
-    document.getElementById('toggle-filter').addEventListener('change',(e)=>{
-        if(e.target.checked){
-            filters.classList.remove('hide')
-        }else{
-            filters.classList.add('hide');
-        }
-    })

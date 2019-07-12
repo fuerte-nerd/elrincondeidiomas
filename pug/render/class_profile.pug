@@ -1,0 +1,149 @@
+extends ../page
+block content
+    div.container
+        div.row.valign-wrapper
+            div.col.s6
+                img(src="./assets/logo.png" style="width: 75px; margin-bottom: -6px; padding-right: 20px;")
+                h1(style="display: inline-block;") Class Profile
+            div.col.s6.right-align
+                a#email.btn
+                    i.material-icons.right mail
+                a#edit.btn
+                    i#lock-icon.material-icons.right lock
+                div#error.red-text
+        div.row.valign-wrapper
+            div.col.s6.input-field
+                input#class_name(type="text")
+                label(for="class_name") Name of class
+            div.col.offset-s2.s4.right-align
+                label Please select a language:
+                br
+                label
+                    input.language#english(type="radio" name="language" option="english")
+                    span English
+                label
+                    input.language#spanish(type="radio" name="language" option="spanish")
+                    span Spanish
+                label
+                    input.language#french(type="radio" name="language" option="french")
+                    span French
+        div.row.valign-wrapper
+            div.col.s12.input-field
+                select#attendees(multiple)
+                    option(value="1") Option 1
+                    option(value="2") Option 2
+                    option(value="3") Option 3
+                label Attendee(s)
+        div.row.valign-wrapper
+            div.col.s4.input-field
+                select#teachers
+                    option(value="" disabled selected) Please select
+                    option(value="1") Option 1
+                    option(value="2") Option 2
+                    option(value="3") Option 3
+                label Teacher
+            div.col.s4.input-field
+                select#levels
+                    option(value="" disabled selected) Please select
+                    option(value="1") Option 1
+                    option(value="2") Option 2
+                    option(value="3") Option 3
+                label Study level
+            div.col.s4.input-field
+                input#rate(type="number")
+                label(for="rate") Monthly rate
+        div.row.center-align
+            h2 Scheduling
+        div.row.valign-wrapper
+            div.col.s2.offset-s1
+                label
+                    input.day#monday(type="checkbox" day="monday")
+                    span Monday
+            div.col.s4.input-field
+                input#monday_time(type="text" class="timepicker" disabled)
+                label(for="monday_time") Start time
+            div.col.s4.input-field
+                input#monday_duration(type="number" min="15" max="180" disabled)
+                label(for="monday_duration") Duration
+            div.col.s1
+        div.row.valign-wrapper
+            div.col.s2.offset-s1
+                label
+                    input.day#tuesday(type="checkbox" day="tuesday")
+                    span Tuesday
+            div.col.s4.input-field
+                input#tuesday_time(type="text" class="timepicker" disabled)
+                label(for="tuesday_time") Start time
+            div.col.s4.input-field
+                input#tuesday_duration(type="number" min="15" max="180" disabled)
+                label(for="tuesday_duration") Duration
+            div.col.s1
+        div.row.valign-wrapper
+            div.col.s2.offset-s1
+                label
+                    input.day#wednesday(type="checkbox" day="wednesday")
+                    span Wednesday
+            div.col.s4.input-field
+                input#wednesday_time(type="text" class="timepicker" disabled)
+                label(for="wednesday_time") Start time
+            div.col.s4.input-field
+                input#wednesday_duration(type="number" min="15" max="180" disabled)
+                label(for="wednesday_duration") Duration
+            div.col.s1
+        div.row.valign-wrapper
+            div.col.s2.offset-s1
+                label
+                    input.day#thursday(type="checkbox" day="thursday")
+                    span Thursday
+            div.col.s4.input-field
+                input#thursday_time(type="text" class="timepicker" disabled)
+                label(for="thursday_time") Start time
+            div.col.s4.input-field
+                input#thursday_duration(type="number" min="15" max="180" disabled)
+                label(for="thursday_duration") Duration
+            div.col.s1
+        div.row.valign-wrapper
+            div.col.s2.offset-s1
+                label
+                    input.day#friday(type="checkbox" day="friday")
+                    span Friday
+            div.col.s4.input-field
+                input#friday_time(type="text" class="timepicker" disabled)
+                label(for="friday_time") Start time
+            div.col.s4.input-field
+                input#friday_duration(type="number" min="15" max="180" disabled)
+                label(for="friday_duration") Duration
+            div.col.s1
+        div.row.valign-wrapper
+            div.col.s2.offset-s1
+                label
+                    input.day#saturday(type="checkbox" day="saturday")
+                    span Saturday
+            div.col.s4.input-field
+                input#saturday_time(type="text" class="timepicker" disabled)
+                label(for="saturday_time") Start time
+            div.col.s4.input-field
+                input#saturday_duration(type="number" min="15" max="180" disabled)
+                label(for="saturday_duration") Duration
+            div.col.s1
+        div.row.valign-wrapper
+            div.col.s2.offset-s1
+                label
+                    input.day#sunday(type="checkbox" day="sunday")
+                    span Sunday
+            div.col.s4.input-field
+                input#sunday_time(type="text" class="timepicker" disabled)
+                label(for="sunday_time") Start time
+            div.col.s4.input-field
+                input#sunday_duration(type="number" min="15" max="180" disabled)
+                label(for="sunday_duration") Duration
+            div.col.s1
+block scripts
+    script(src="../libs/init/class_profile.js")
+    script.
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.timepicker');
+            var instances = M.Timepicker.init(elems, {
+                twelveHour: false
+            });
+        });
